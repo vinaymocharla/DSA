@@ -1,9 +1,10 @@
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
 
-        output = set()
-
         nums.sort()
+
+        output=set()
+
 
         for i in range(len(nums)-2):
 
@@ -14,26 +15,24 @@ class Solution:
             k=len(nums)-1
 
             while(j<k):
-                
-                sum=nums[i]+nums[j]+nums[k]
-                if sum==0:
+
+                curr_sum = nums[i]+nums[j]+nums[k]
+
+                if(curr_sum>0):
+                    k-=1
+                elif(curr_sum<0):
+                    j+=1
+
+                else:
+
                     output.add((nums[i],nums[j],nums[k]))
+
                     j+=1
                     k-=1
+
                     while(j<k and nums[j]==nums[j-1]): j+=1
                     while(j<k and nums[k]==nums[k+1]): k-=1
-
-                elif sum>0:
-                    k-=1
-                else:
-                    j+=1
-
-                
-
+                    
         return list(output)
-
-
-
-
 
         
