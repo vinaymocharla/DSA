@@ -1,16 +1,19 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
 
+
+        map={}
+
         freq = [[] for i in range(len(nums)+1)]
 
-        map ={}
+        res=[]
 
-        res=[]*len(nums)
 
-        for num in nums:
+        for i in nums:
 
-            map[num] = 1 + map.get(num,0)
+            map[i]=map.get(i,0)+1
 
+        
         for key,value in map.items():
 
             freq[value].append(key)
@@ -22,10 +25,7 @@ class Solution:
 
                 res.append(j)
 
-                if(len(res)==k):
+                if len(res)==k:
                     return res
-
-        
-
 
         
