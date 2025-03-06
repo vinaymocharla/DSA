@@ -8,6 +8,8 @@ class Solution:
 
         for i in range(len(nums)-2):
 
+            if i>0 and nums[i]==nums[i-1]:i+=1
+
             j=i+1
             k=len(nums)-1
 
