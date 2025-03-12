@@ -8,26 +8,26 @@ class Solution:
         rightmax=height[r]
         res=0
 
-        while(l<r):
 
+        while(l<r):
 
             if leftmax<=rightmax:
 
                 l+=1
-                leftmax=max(height[l],leftmax)
 
-                res+= (leftmax-height[l])
+                leftmax=max(leftmax,height[l])
+
+                res+=leftmax-height[l]
 
             elif rightmax<=leftmax:
 
                 r-=1
 
-                rightmax=max(height[r],rightmax)
+                rightmax = max(rightmax,height[r])
 
                 res+=rightmax-height[r]
 
         return res
-
 
 
 
