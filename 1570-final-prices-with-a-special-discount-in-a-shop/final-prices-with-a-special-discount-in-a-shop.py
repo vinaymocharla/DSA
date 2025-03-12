@@ -1,7 +1,7 @@
 class Solution:
     def finalPrices(self, prices: List[int]) -> List[int]:
 
-        res= prices
+        res= prices.copy()
         stack=[]
 
 
