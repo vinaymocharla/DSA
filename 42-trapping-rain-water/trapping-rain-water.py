@@ -4,31 +4,31 @@ class Solution:
         l=0
         r=len(height)-1
 
-        leftmax=height[l]
-        rightmax=height[r]
-        res=0
+        leftmax= height[l]
+        rightmax = height[r]
 
+        sum=0
 
         while(l<r):
+
 
             if leftmax<=rightmax:
 
                 l+=1
 
-                leftmax=max(leftmax,height[l])
+                leftmax= max(leftmax,height[l])
 
-                res+=leftmax-height[l]
+                sum+= leftmax- height[l]
 
-            elif rightmax<=leftmax:
+            else:
 
                 r-=1
 
-                rightmax = max(rightmax,height[r])
+                rightmax=max(rightmax,height[r])
 
-                res+=rightmax-height[r]
+                sum+= rightmax- height[r]
 
-        return res
-
+        return sum
 
 
         
