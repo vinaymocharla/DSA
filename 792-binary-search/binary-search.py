@@ -8,11 +8,7 @@ class Solution:
         l=0
         r=len(nums)-1
 
-        if len(nums)==1:
-            if nums[0]==target:
-                return 0
-            else:
-                return -1
+        
 
         while(l<=r):
 
