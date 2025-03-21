@@ -17,7 +17,7 @@ class Solution:
 
                 r=m-1
 
-            elif target > matrix[m][len(matrix[m])-1]:
+            elif target > matrix[m][-1]:
 
                 l=m+1
             else:
