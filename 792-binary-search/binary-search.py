@@ -13,7 +13,7 @@ class Solution:
         while(l<=r):
 
 
-            mid = (r+l)//2
+            mid = l+(r-l)//2
 
             if nums[mid]>target:
 
