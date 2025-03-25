@@ -20,14 +20,16 @@ class Solution:
             
             m= l+(r-l)//2
 
+            res= min(res,nums[m])
+
             if nums[m] >= nums[l]:
 
-                res= min(res,nums[l])
+                
 
                 l=m+1
             else:
 
-                r=m
+                r=m-1
         return res
 
 
