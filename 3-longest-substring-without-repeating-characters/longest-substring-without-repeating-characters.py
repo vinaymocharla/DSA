@@ -1,26 +1,24 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
 
-        stringset = set()
-
-        ans=0
+        freqset= set()
 
         l=0
         r=0
 
+        maxwindow = 0
+
         while(r!=len(s)):
 
-            while s[r] in stringset:
+            while(s[r] in freqset):
 
-                stringset.remove(s[l])
+                freqset.remove(s[l])
                 l+=1
 
-            
-            stringset.add(s[r])
+            freqset.add(s[r])
 
-            ans = max(ans,r-l+1)
+            maxwindow = max(maxwindow, (r-l+1))
 
             r+=1
 
-        return ans
-        
+        return maxwindow
