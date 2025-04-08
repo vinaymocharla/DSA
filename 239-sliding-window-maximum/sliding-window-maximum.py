@@ -1,13 +1,11 @@
 class Solution:
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
 
-        ans=[]
+        mydeque= deque()
 
-        mydeque = deque()
-
-
-      #  l=0
         r=0
+
+        ans=[]
 
         while(r!=len(nums)):
 
@@ -15,7 +13,7 @@ class Solution:
 
                 mydeque.popleft()
 
-            while(mydeque and nums[r]>nums[mydeque[-1]]):
+            while mydeque and nums[r]> nums[mydeque[-1]]:
 
                 mydeque.pop()
 
@@ -30,12 +28,6 @@ class Solution:
         return ans
 
             
-
-
-
-            
-
-
 
 
         
