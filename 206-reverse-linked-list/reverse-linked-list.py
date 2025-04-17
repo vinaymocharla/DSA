@@ -11,13 +11,11 @@ class Solution:
 
         while(curr!=None):
 
-            temp = curr.next
+            tempNode = curr.next
 
-            curr.next= prev
-
+            curr.next = prev
             prev = curr
-
-            curr= temp
+            curr= tempNode
 
         return prev
         
