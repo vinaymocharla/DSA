@@ -51,7 +51,7 @@ class Solution:
             first=temp1
             second=temp2
 
-        return head
+       
 
 
 
