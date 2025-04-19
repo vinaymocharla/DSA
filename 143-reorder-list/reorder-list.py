@@ -9,9 +9,7 @@ class Solution:
         Do not return anything, modify head in-place instead.
         """
 
-
-        slow=head
-        fast=head
+        slow,fast=  head,head
 
 
         while(fast and fast.next):
@@ -19,46 +17,38 @@ class Solution:
             slow=slow.next
             fast=fast.next.next
 
-        prev = None
+        
 
+        prev=None
         curr=slow.next
 
         slow.next=None
 
         while(curr):
 
-            temp = curr.next
+            tempNode = curr.next
 
-            curr.next=prev
+            curr.next = prev
 
             prev=curr
-            curr= temp
-        
+            curr=tempNode
 
-
-        first =head
+        first = head
         second=prev
 
-        while(first and second ):
+        while(first and second):
 
-            temp1=first.next
-            temp2=second.next
+            temp1 = first.next
+            temp2 = second.next
 
+            first.next=second
+            second.next = temp1
 
-            first.next = second
-            second.next=temp1
-
-            first=temp1
+            first = temp1
             second=temp2
-
-       
 
 
 
 
             
-
-
-
-
         
