@@ -33,12 +33,11 @@ class Solution:
 
             prev=curr
             curr= temp
-        list1 = head
-        list2= prev
+        
 
 
-        first =list1
-        second=list2
+        first =head
+        second=prev
 
         while(first and second ):
 
