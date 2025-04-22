@@ -38,8 +38,7 @@ class Solution:
 
                 map2[s[l]]-=1
 
-                if map2[s[l]]==0:
-                    del map2[s[l]]
+                
 
                 l+=1
 
