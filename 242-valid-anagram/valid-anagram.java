@@ -1,46 +1,40 @@
 class Solution {
     public boolean isAnagram(String s, String t) {
 
-       Map<Character,Integer> map = new HashMap();
+        HashMap<Character,Integer> map = new HashMap();
 
 
-        for(char i:s.toCharArray()){
+        for(char i : s.toCharArray()){
 
             map.put(i,map.getOrDefault(i,0)+1);
-
-
         }
 
-        System.out.println(map);
+        for(char ch:t.toCharArray()){
 
-        for(char j:t.toCharArray()){
+            if (map.containsKey(ch)){
 
-            if (map.containsKey(j)){
+               
+                
 
-                if (map.get(j)==1){
+                map.put(ch,map.get(ch)-1);
 
-                    map.remove(j);
-
-
+                 if(map.get(ch)==0){
+                    map.remove(ch);
                 }
-                else{
-                    map.put(j,map.get(j)-1);
-
-                }
-            
-
+                
 
             }
             else{
+
                 return false;
             }
+
+
         }
-         System.out.println(map);
+
+        System.out.print(map.values());
 
         return map.size()==0;
-
-
-
         
     }
 }
