@@ -32,7 +32,7 @@ class Solution {
 
         }
 
-        System.out.print(map.values());
+  
 
         return map.size()==0;
         
