@@ -23,19 +23,15 @@ class Solution {
 
        
 
-        if (Math.abs(height(root.left)-height(root.right))<=1  && isBalanced(root.left) && isBalanced(root.right)){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return (Math.abs(height(root.left)-height(root.right))<=1  && isBalanced(root.left) && isBalanced(root.right));
+       
 
         
-
+    }
 
 
                 
-    }
+    
 
     private int height(TreeNode root){
 
