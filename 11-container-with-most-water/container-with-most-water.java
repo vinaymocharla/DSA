@@ -10,7 +10,7 @@ class Solution {
 
             maxArea=Math.max(maxArea,Math.min(height[l],height[r])*(r-l));
 
-            if(height[l]<=height[r]){
+            if(height[l]<height[r]){
                 l++;
             }
             else{
