@@ -9,7 +9,7 @@ class Solution {
 
             char[] ch = word.toCharArray();
             Arrays.sort(ch);
-            String sortedword = Arrays.toString(ch);
+            String sortedword = new String(ch);
 
             if(!map.containsKey(sortedword)){
                 map.put(sortedword,new ArrayList());
