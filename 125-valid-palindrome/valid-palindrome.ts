@@ -5,7 +5,7 @@ function isPalindrome(s: string): boolean {
     let l:number=0;
     let r:number = s.length-1
 
-    while(l<r){
+    while(l<=r){
 
 
 
